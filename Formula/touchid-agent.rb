@@ -22,9 +22,9 @@
 class TouchidAgent < Formula
   desc "macOS SSH agent backed by the Secure Enclave and Touch ID"
   homepage "https://github.com/ignaciojimenez/touchid-agent"
-  version "0.6.0"
+  version "0.7.0"
   url "https://github.com/ignaciojimenez/touchid-agent/releases/download/v#{version}/touchid-agent-v#{version}-darwin-universal.tar.gz"
-  sha256 "1fdc4b23d2004e97bf8ced9559213e0502085cbf461177ffffda7a536d6cb741"
+  sha256 "f0c1a4f55ee3fa8982f87d0e920d7e82bd0b6f453b67fae4588a4b4e02277dde"
   license "MIT"
 
   depends_on :macos
