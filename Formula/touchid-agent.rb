@@ -27,8 +27,11 @@ class TouchidAgent < Formula
   sha256 "b8c4bf7345f25b0616adf06a4f51d181cc8562d23fc945cc8b5f64813f9907c0"
   license "MIT"
 
+  # macOS-only (notarized universal Mach-O). The minimum — macOS 11, for
+  # CryptoKit's SecureEnclave.P256 — is enforced by the binary's build target
+  # (-target *-apple-macos11); Homebrew removed the `depends_on macos: <version>`
+  # DSL, so there is no formula-level version constraint to declare.
   depends_on :macos
-  depends_on macos: :big_sur # CryptoKit's SecureEnclave.P256 requires macOS 11+.
 
   def install
     bin.install "touchid-agent"
